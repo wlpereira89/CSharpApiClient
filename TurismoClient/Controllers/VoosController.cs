@@ -11,5 +11,13 @@ namespace TurismoClient.Views.Home
     [Route("api/Voos")]
     public class VoosController : Controller
     {
+        // POST: eventos/Create
+        [HttpPost]
+        public IActionResult BuscarVoo([Bind(include: "SelVoo,Origem,Destino,DataIda,DataVolta,Maiores,Menores")] string dados)
+        {
+            
+
+            return View(dados);
+        }
     }
 }

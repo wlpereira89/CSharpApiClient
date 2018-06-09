@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://org.servicoturismo/" targetNamespace="http://org.servicoturismo/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="consultarVoos" type="tns:consultarVoos" />
+  <xs:element name="consultarVoosResponse" type="tns:consultarVoosResponse" />
+  <xs:element name="inserirVoo" type="tns:inserirVoo" />
+  <xs:element name="inserirVooResponse" type="tns:inserirVooResponse" />
+  <xs:element name="listarVoos" type="tns:listarVoos" />
+  <xs:element name="listarVoosResponse" type="tns:listarVoosResponse" />
+  <xs:element name="obterVoos" type="tns:obterVoos" />
+  <xs:element name="obterVoosResponse" type="tns:obterVoosResponse" />
+  <xs:element name="reservarPassagem" type="tns:reservarPassagem" />
+  <xs:element name="reservarPassagemResponse" type="tns:reservarPassagemResponse" />
+  <xs:complexType name="inserirVoo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inserirVooResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultarVoos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element name="arg3" type="xs:int" />
+      <xs:element name="arg4" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarVoosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservarPassagem">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+      <xs:element name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservarPassagemResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obterVoos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obterVoosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:voo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="voo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarVoos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarVoosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

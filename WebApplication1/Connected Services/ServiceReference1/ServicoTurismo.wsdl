@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://org.servicoturismo/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicoTurismo" targetNamespace="http://org.servicoturismo/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.6.173:8080/WebServTurismo/ServicoTurismo?xsd=1" namespace="http://org.servicoturismo/" />
+    </xsd:schema>
+  </types>
+  <message name="inserirVoo">
+    <part name="parameters" element="tns:inserirVoo" />
+  </message>
+  <message name="inserirVooResponse">
+    <part name="parameters" element="tns:inserirVooResponse" />
+  </message>
+  <message name="listarVoos">
+    <part name="parameters" element="tns:listarVoos" />
+  </message>
+  <message name="listarVoosResponse">
+    <part name="parameters" element="tns:listarVoosResponse" />
+  </message>
+  <message name="obterVoos">
+    <part name="parameters" element="tns:obterVoos" />
+  </message>
+  <message name="obterVoosResponse">
+    <part name="parameters" element="tns:obterVoosResponse" />
+  </message>
+  <message name="consultarVoos">
+    <part name="parameters" element="tns:consultarVoos" />
+  </message>
+  <message name="consultarVoosResponse">
+    <part name="parameters" element="tns:consultarVoosResponse" />
+  </message>
+  <message name="reservarPassagem">
+    <part name="parameters" element="tns:reservarPassagem" />
+  </message>
+  <message name="reservarPassagemResponse">
+    <part name="parameters" element="tns:reservarPassagemResponse" />
+  </message>
+  <portType name="VoosWebService">
+    <operation name="inserirVoo">
+      <input wsam:Action="http://org.servicoturismo/VoosWebService/inserirVooRequest" message="tns:inserirVoo" />
+      <output wsam:Action="http://org.servicoturismo/VoosWebService/inserirVooResponse" message="tns:inserirVooResponse" />
+    </operation>
+    <operation name="listarVoos">
+      <input wsam:Action="http://org.servicoturismo/VoosWebService/listarVoosRequest" message="tns:listarVoos" />
+      <output wsam:Action="http://org.servicoturismo/VoosWebService/listarVoosResponse" message="tns:listarVoosResponse" />
+    </operation>
+    <operation name="obterVoos">
+      <input wsam:Action="http://org.servicoturismo/VoosWebService/obterVoosRequest" message="tns:obterVoos" />
+      <output wsam:Action="http://org.servicoturismo/VoosWebService/obterVoosResponse" message="tns:obterVoosResponse" />
+    </operation>
+    <operation name="consultarVoos">
+      <input wsam:Action="http://org.servicoturismo/VoosWebService/consultarVoosRequest" message="tns:consultarVoos" />
+      <output wsam:Action="http://org.servicoturismo/VoosWebService/consultarVoosResponse" message="tns:consultarVoosResponse" />
+    </operation>
+    <operation name="reservarPassagem">
+      <input wsam:Action="http://org.servicoturismo/VoosWebService/reservarPassagemRequest" message="tns:reservarPassagem" />
+      <output wsam:Action="http://org.servicoturismo/VoosWebService/reservarPassagemResponse" message="tns:reservarPassagemResponse" />
+    </operation>
+  </portType>
+  <binding name="VoosWebServicePortBinding" type="tns:VoosWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="inserirVoo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarVoos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obterVoos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="consultarVoos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reservarPassagem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicoTurismo">
+    <port name="VoosWebServicePort" binding="tns:VoosWebServicePortBinding">
+      <soap:address location="http://192.168.6.173:8080/WebServTurismo/ServicoTurismo" />
+    </port>
+  </service>
+</definitions>

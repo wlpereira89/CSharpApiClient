@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TurismoClient.Models;
 
+
 namespace TurismoClient.Controllers
 {
     public class HomeController : Controller
@@ -14,12 +15,13 @@ namespace TurismoClient.Controllers
         {
             return View();
         }
-
-        public IActionResult About()
+        [HttpPost]
+        public IActionResult About([Bind(include: "SelVoo,Origem,Destino,DataIda,DataVolta,Maiores,Menores")] string dados)
         {
             ViewData["Message"] = "Your application description page.";
+            
 
-            return View();
+            return View(dados);
         }
 
         public IActionResult Contact()

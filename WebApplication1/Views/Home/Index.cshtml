@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Agencia Turismo";
+}
+
+        <div class="titulo">
+            </br>
+            </br>
+            @Html.Label("Voos")
+            </br>
+            </br>
+        </div>
+
+        <div class="dados">
+            @Html.Label("Só ida")
+            @Html.RadioButton("SelVoo", "Ida")
+            @Html.Label(" Ida e Volta")
+            @Html.RadioButton("SelVoo", "IdaVolta")
+            </br>
+            @Html.Label("Origem")
+            @Html.Editor("Origem")
+            @Html.Label("Destino")
+            @Html.Editor("Destino")
+            </br>
+            @Html.Label("Data Ida")
+            @Html.Editor("DataIda", new { htmlAttributes = new { @type = "date" } })
+            @Html.Label("Data Volta")
+            @Html.Editor("DataVolta", new { htmlAttributes = new { @type = "date" } })
+            </br>
+            @Html.Label("Maiores")
+            @Html.Editor("Maiores", new { htmlAttributes = new { @type = "number" } })
+            @Html.Label("Menores")
+            @Html.Editor("Menores", new { htmlAttributes = new { @type = "number" } })
+
+            </br>
+            </br>
+            <input type="submit" value="Index" class="btn btn-default" />
+            </br>
+            </br>
+        </div>
+    </div>
+    <div class="Hospedagem">
+        <div class="titulo">
+            @Html.Label("Hospedagem")
+            </br>
+            </br>
+        </div>
+        <div class="dados">
+            @Html.Label("Cidade")
+            @Html.Editor("Cidade")
+            @Html.Label("ou Hotel")
+            @Html.Editor("Hotel")
+            </br>
+            @Html.Label("Data Entrada")
+            @Html.Editor("DataEntrada", new { htmlAttributes = new { @type = "date" } })
+            @Html.Label("Data Saida")
+            @Html.Editor("DataSaida", new { htmlAttributes = new { @type = "date" } })
+            </br>
+            @Html.Label("Quartos")
+            @Html.Editor("Quartos", new { htmlAttributes = new { @type = "number" } })
+            @Html.Label("Maiores")
+            @Html.Editor("MaioresH", new { htmlAttributes = new { @type = "number" } })
+            @Html.Label("Menores")
+            @Html.Editor("MenoresH", new { htmlAttributes = new { @type = "number" } })
+        </div>
+        </br>
+        </br>
+        <input type="submit" value="BuscarPassagens" class="btn btn-default" />
+        </br>
+        </br>
+
+    </div>
+
+
+@{ /*
+
+
+       <div class="jumbotron">
+           <h1>ASP.NET</h1>
+           <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+           <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+       </div>
+
+       <div class="row">
+           <div class="col-md-4">
+               <h2>Getting started</h2>
+               <p>
+                   ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                   enables a clean separation of concerns and gives you full control over markup
+                   for enjoyable, agile development.
+               </p>
+               <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+           </div>
+           <div class="col-md-4">
+               <h2>Get more libraries</h2>
+               <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+               <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+           </div>
+           <div class="col-md-4">
+               <h2>Web Hosting</h2>
+               <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+               <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+           </div>
+       </div>
+       */
+
+}
