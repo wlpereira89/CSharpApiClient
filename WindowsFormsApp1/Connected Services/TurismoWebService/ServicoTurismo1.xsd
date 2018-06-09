@@ -29,7 +29,7 @@
   </xs:complexType>
   <xs:complexType name="consultarVoosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="reservarPassagem">
@@ -48,11 +48,8 @@
   </xs:complexType>
   <xs:complexType name="obterVoosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:voo" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="voo">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarVoos">
     <xs:sequence />

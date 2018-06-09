@@ -20,14 +20,25 @@ namespace WindowsFormsApp1
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
             Close();
-            Entrada _f;
-            _f = new Entrada();
-            _f.Show();
         }
 
         private void BtnConfirma_Click(object sender, EventArgs e)
         {
             var servicoVoos = new TurismoWebService.VoosWebServiceClient();
+        }
+
+        private void Hospedagem_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Entrada _f;
+            _f = new Entrada();
+            _f.Show();
+        }
+
+        private void Hospedagem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Entrada _f;
+            _f = new Entrada();
+            _f.Show();
         }
     }
 }

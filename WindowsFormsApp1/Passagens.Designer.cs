@@ -44,6 +44,7 @@
             this.EditDestino = new System.Windows.Forms.TextBox();
             this.BtnConfirma = new System.Windows.Forms.Button();
             this.BtnVoltar = new System.Windows.Forms.Button();
+            this.BtnListarVoos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).BeginInit();
             this.SuspendLayout();
@@ -168,7 +169,7 @@
             // 
             // BtnConfirma
             // 
-            this.BtnConfirma.Location = new System.Drawing.Point(81, 158);
+            this.BtnConfirma.Location = new System.Drawing.Point(53, 154);
             this.BtnConfirma.Name = "BtnConfirma";
             this.BtnConfirma.Size = new System.Drawing.Size(75, 23);
             this.BtnConfirma.TabIndex = 14;
@@ -178,18 +179,30 @@
             // 
             // BtnVoltar
             // 
-            this.BtnVoltar.Location = new System.Drawing.Point(241, 158);
+            this.BtnVoltar.Location = new System.Drawing.Point(302, 154);
             this.BtnVoltar.Name = "BtnVoltar";
             this.BtnVoltar.Size = new System.Drawing.Size(75, 23);
             this.BtnVoltar.TabIndex = 15;
             this.BtnVoltar.Text = "Voltar";
             this.BtnVoltar.UseVisualStyleBackColor = true;
+            this.BtnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
+            // 
+            // BtnListarVoos
+            // 
+            this.BtnListarVoos.Location = new System.Drawing.Point(171, 154);
+            this.BtnListarVoos.Name = "BtnListarVoos";
+            this.BtnListarVoos.Size = new System.Drawing.Size(75, 23);
+            this.BtnListarVoos.TabIndex = 16;
+            this.BtnListarVoos.Text = "Listar Voos";
+            this.BtnListarVoos.UseVisualStyleBackColor = true;
+            this.BtnListarVoos.Click += new System.EventHandler(this.BtnListarVoos_Click);
             // 
             // Passagens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 194);
+            this.Controls.Add(this.BtnListarVoos);
             this.Controls.Add(this.BtnVoltar);
             this.Controls.Add(this.BtnConfirma);
             this.Controls.Add(this.EditDestino);
@@ -233,5 +246,6 @@
         private System.Windows.Forms.TextBox EditDestino;
         private System.Windows.Forms.Button BtnConfirma;
         private System.Windows.Forms.Button BtnVoltar;
+        private System.Windows.Forms.Button BtnListarVoos;
     }
 }

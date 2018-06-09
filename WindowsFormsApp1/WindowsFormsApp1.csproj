@@ -64,7 +64,7 @@
     <Compile Include="Hospedagem.Designer.cs">
       <DependentUpon>Hospedagem.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListasComuns.cs" />
+    <Compile Include="Share.cs" />
     <Compile Include="Passagens.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +103,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\TurismoWebService\ServicoTurismo.wsdl" />
-    <None Include="Connected Services\TurismoWebService\ServicoTurismo.xsd">
+    <EmbeddedResource Include="ReservaVoo.resx">
+      <DependentUpon>ReservaVoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\TurismoWebService\ServicoTurismo1.wsdl" />
+    <None Include="Connected Services\TurismoWebService\ServicoTurismo1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.consultarVoosResponse.datasource">
@@ -120,9 +123,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.reservarPassagemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.voo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">

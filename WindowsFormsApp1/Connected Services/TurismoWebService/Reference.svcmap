@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.6.173:8080/WebServTurismo/ServicoTurismo?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServTurismo/ServicoTurismo?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicoTurismo.xsd" MetadataType="Schema" ID="0dd7a470-d6c9-44c0-9c16-fb3b006e9063" SourceId="1" SourceUrl="http://192.168.6.173:8080/WebServTurismo/ServicoTurismo?xsd=1" />
-    <MetadataFile FileName="ServicoTurismo.wsdl" MetadataType="Wsdl" ID="bd0fa0fd-fa9b-438a-85a6-ca5f3fd10047" SourceId="1" SourceUrl="http://192.168.6.173:8080/WebServTurismo/ServicoTurismo?wsdl" />
+    <MetadataFile FileName="ServicoTurismo1.wsdl" MetadataType="Wsdl" ID="b504fb7a-0819-4c3f-aa3b-2457a913b0ec" SourceId="1" SourceUrl="http://localhost:8080/WebServTurismo/ServicoTurismo?wsdl" />
+    <MetadataFile FileName="ServicoTurismo1.xsd" MetadataType="Schema" ID="08925df6-b928-4f91-8353-5baab842c449" SourceId="1" SourceUrl="http://localhost:8080/WebServTurismo/ServicoTurismo?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

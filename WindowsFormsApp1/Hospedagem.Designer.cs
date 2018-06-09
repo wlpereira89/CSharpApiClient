@@ -209,6 +209,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Hospedagem";
             this.Text = "Hospedagem";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hospedagem_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Hospedagem_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

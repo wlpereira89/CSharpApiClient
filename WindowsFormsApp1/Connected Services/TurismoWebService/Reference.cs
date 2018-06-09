@@ -116,24 +116,6 @@ namespace WindowsFormsApp1.TurismoWebService {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://org.servicoturismo/")]
-    public partial class voo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -152,12 +134,12 @@ namespace WindowsFormsApp1.TurismoWebService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WindowsFormsApp1.TurismoWebService.voo[] @return;
+        public string[] @return;
         
         public obterVoosResponse() {
         }
         
-        public obterVoosResponse(WindowsFormsApp1.TurismoWebService.voo[] @return) {
+        public obterVoosResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -207,13 +189,13 @@ namespace WindowsFormsApp1.TurismoWebService {
     public partial class consultarVoosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
         
         public consultarVoosResponse() {
         }
         
-        public consultarVoosResponse(string @return) {
+        public consultarVoosResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -334,7 +316,7 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.obterVoos(request);
         }
         
-        public WindowsFormsApp1.TurismoWebService.voo[] obterVoos() {
+        public string[] obterVoos() {
             WindowsFormsApp1.TurismoWebService.obterVoosRequest inValue = new WindowsFormsApp1.TurismoWebService.obterVoosRequest();
             WindowsFormsApp1.TurismoWebService.obterVoosResponse retVal = ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).obterVoos(inValue);
             return retVal.@return;
@@ -355,7 +337,7 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.consultarVoos(request);
         }
         
-        public string consultarVoos(string arg0, string arg1, string arg2, int arg3, int arg4) {
+        public string[] consultarVoos(string arg0, string arg1, string arg2, int arg3, int arg4) {
             WindowsFormsApp1.TurismoWebService.consultarVoosRequest inValue = new WindowsFormsApp1.TurismoWebService.consultarVoosRequest();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
