@@ -15,6 +15,15 @@ namespace WindowsFormsApp1.TurismoWebService {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://org.servicoturismo/", ConfigurationName="TurismoWebService.VoosWebService")]
     public interface VoosWebService {
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/VoosWebService/ExibirTodasReservasRequest", ReplyAction="http://org.servicoturismo/VoosWebService/ExibirTodasReservasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse ExibirTodasReservas(WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/VoosWebService/ExibirTodasReservasRequest", ReplyAction="http://org.servicoturismo/VoosWebService/ExibirTodasReservasResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse> ExibirTodasReservasAsync(WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest request);
+        
         // CODEGEN: O parâmetro 'arg0' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/VoosWebService/inserirVooRequest", ReplyAction="http://org.servicoturismo/VoosWebService/inserirVooResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -58,6 +67,43 @@ namespace WindowsFormsApp1.TurismoWebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/VoosWebService/reservarPassagemRequest", ReplyAction="http://org.servicoturismo/VoosWebService/reservarPassagemResponse")]
         System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.reservarPassagemResponse> reservarPassagemAsync(WindowsFormsApp1.TurismoWebService.reservarPassagemRequest request);
+        
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/VoosWebService/ExibirReservasRequest", ReplyAction="http://org.servicoturismo/VoosWebService/ExibirReservasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApp1.TurismoWebService.ExibirReservasResponse ExibirReservas(WindowsFormsApp1.TurismoWebService.ExibirReservasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/VoosWebService/ExibirReservasRequest", ReplyAction="http://org.servicoturismo/VoosWebService/ExibirReservasResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.ExibirReservasResponse> ExibirReservasAsync(WindowsFormsApp1.TurismoWebService.ExibirReservasRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ExibirTodasReservas", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class ExibirTodasReservasRequest {
+        
+        public ExibirTodasReservasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ExibirTodasReservasResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class ExibirTodasReservasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public ExibirTodasReservasResponse() {
+        }
+        
+        public ExibirTodasReservasResponse(string[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -152,33 +198,33 @@ namespace WindowsFormsApp1.TurismoWebService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
+        public string origem;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg1;
+        public string destino;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg2;
+        public string data;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg3;
+        public int menores;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg4;
+        public int maiores;
         
         public consultarVoosRequest() {
         }
         
-        public consultarVoosRequest(string arg0, string arg1, string arg2, int arg3, int arg4) {
-            this.arg0 = arg0;
-            this.arg1 = arg1;
-            this.arg2 = arg2;
-            this.arg3 = arg3;
-            this.arg4 = arg4;
+        public consultarVoosRequest(string origem, string destino, string data, int menores, int maiores) {
+            this.origem = origem;
+            this.destino = destino;
+            this.data = data;
+            this.menores = menores;
+            this.maiores = maiores;
         }
     }
     
@@ -208,28 +254,28 @@ namespace WindowsFormsApp1.TurismoWebService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
+        public int idVoo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg1;
+        public int quantidade;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg2;
+        public int cartao;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg3;
+        public int parcelamento;
         
         public reservarPassagemRequest() {
         }
         
-        public reservarPassagemRequest(int arg0, int arg1, int arg2, int arg3) {
-            this.arg0 = arg0;
-            this.arg1 = arg1;
-            this.arg2 = arg2;
-            this.arg3 = arg3;
+        public reservarPassagemRequest(int idVoo, int quantidade, int cartao, int parcelamento) {
+            this.idVoo = idVoo;
+            this.quantidade = quantidade;
+            this.cartao = cartao;
+            this.parcelamento = parcelamento;
         }
     }
     
@@ -247,6 +293,42 @@ namespace WindowsFormsApp1.TurismoWebService {
         }
         
         public reservarPassagemResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ExibirReservas", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class ExibirReservasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int voo;
+        
+        public ExibirReservasRequest() {
+        }
+        
+        public ExibirReservasRequest(int voo) {
+            this.voo = voo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ExibirReservasResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class ExibirReservasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public ExibirReservasResponse() {
+        }
+        
+        public ExibirReservasResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -276,6 +358,27 @@ namespace WindowsFormsApp1.TurismoWebService {
         
         public VoosWebServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse WindowsFormsApp1.TurismoWebService.VoosWebService.ExibirTodasReservas(WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest request) {
+            return base.Channel.ExibirTodasReservas(request);
+        }
+        
+        public string[] ExibirTodasReservas() {
+            WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest inValue = new WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest();
+            WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse retVal = ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).ExibirTodasReservas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse> WindowsFormsApp1.TurismoWebService.VoosWebService.ExibirTodasReservasAsync(WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest request) {
+            return base.Channel.ExibirTodasReservasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse> ExibirTodasReservasAsync() {
+            WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest inValue = new WindowsFormsApp1.TurismoWebService.ExibirTodasReservasRequest();
+            return ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).ExibirTodasReservasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -347,13 +450,13 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.consultarVoos(request);
         }
         
-        public string[] consultarVoos(string arg0, string arg1, string arg2, int arg3, int arg4) {
+        public string[] consultarVoos(string origem, string destino, string data, int menores, int maiores) {
             WindowsFormsApp1.TurismoWebService.consultarVoosRequest inValue = new WindowsFormsApp1.TurismoWebService.consultarVoosRequest();
-            inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            inValue.arg2 = arg2;
-            inValue.arg3 = arg3;
-            inValue.arg4 = arg4;
+            inValue.origem = origem;
+            inValue.destino = destino;
+            inValue.data = data;
+            inValue.menores = menores;
+            inValue.maiores = maiores;
             WindowsFormsApp1.TurismoWebService.consultarVoosResponse retVal = ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).consultarVoos(inValue);
             return retVal.@return;
         }
@@ -363,13 +466,13 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.consultarVoosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.consultarVoosResponse> consultarVoosAsync(string arg0, string arg1, string arg2, int arg3, int arg4) {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.consultarVoosResponse> consultarVoosAsync(string origem, string destino, string data, int menores, int maiores) {
             WindowsFormsApp1.TurismoWebService.consultarVoosRequest inValue = new WindowsFormsApp1.TurismoWebService.consultarVoosRequest();
-            inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            inValue.arg2 = arg2;
-            inValue.arg3 = arg3;
-            inValue.arg4 = arg4;
+            inValue.origem = origem;
+            inValue.destino = destino;
+            inValue.data = data;
+            inValue.menores = menores;
+            inValue.maiores = maiores;
             return ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).consultarVoosAsync(inValue);
         }
         
@@ -378,12 +481,12 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.reservarPassagem(request);
         }
         
-        public bool reservarPassagem(int arg0, int arg1, int arg2, int arg3) {
+        public bool reservarPassagem(int idVoo, int quantidade, int cartao, int parcelamento) {
             WindowsFormsApp1.TurismoWebService.reservarPassagemRequest inValue = new WindowsFormsApp1.TurismoWebService.reservarPassagemRequest();
-            inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            inValue.arg2 = arg2;
-            inValue.arg3 = arg3;
+            inValue.idVoo = idVoo;
+            inValue.quantidade = quantidade;
+            inValue.cartao = cartao;
+            inValue.parcelamento = parcelamento;
             WindowsFormsApp1.TurismoWebService.reservarPassagemResponse retVal = ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).reservarPassagem(inValue);
             return retVal.@return;
         }
@@ -393,13 +496,36 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.reservarPassagemAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.reservarPassagemResponse> reservarPassagemAsync(int arg0, int arg1, int arg2, int arg3) {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.reservarPassagemResponse> reservarPassagemAsync(int idVoo, int quantidade, int cartao, int parcelamento) {
             WindowsFormsApp1.TurismoWebService.reservarPassagemRequest inValue = new WindowsFormsApp1.TurismoWebService.reservarPassagemRequest();
-            inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            inValue.arg2 = arg2;
-            inValue.arg3 = arg3;
+            inValue.idVoo = idVoo;
+            inValue.quantidade = quantidade;
+            inValue.cartao = cartao;
+            inValue.parcelamento = parcelamento;
             return ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).reservarPassagemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp1.TurismoWebService.ExibirReservasResponse WindowsFormsApp1.TurismoWebService.VoosWebService.ExibirReservas(WindowsFormsApp1.TurismoWebService.ExibirReservasRequest request) {
+            return base.Channel.ExibirReservas(request);
+        }
+        
+        public string[] ExibirReservas(int voo) {
+            WindowsFormsApp1.TurismoWebService.ExibirReservasRequest inValue = new WindowsFormsApp1.TurismoWebService.ExibirReservasRequest();
+            inValue.voo = voo;
+            WindowsFormsApp1.TurismoWebService.ExibirReservasResponse retVal = ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).ExibirReservas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.ExibirReservasResponse> WindowsFormsApp1.TurismoWebService.VoosWebService.ExibirReservasAsync(WindowsFormsApp1.TurismoWebService.ExibirReservasRequest request) {
+            return base.Channel.ExibirReservasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.ExibirReservasResponse> ExibirReservasAsync(int voo) {
+            WindowsFormsApp1.TurismoWebService.ExibirReservasRequest inValue = new WindowsFormsApp1.TurismoWebService.ExibirReservasRequest();
+            inValue.voo = voo;
+            return ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).ExibirReservasAsync(inValue);
         }
     }
 }

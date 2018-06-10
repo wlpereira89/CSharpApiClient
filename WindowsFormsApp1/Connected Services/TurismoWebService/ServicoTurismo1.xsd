@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://org.servicoturismo/" targetNamespace="http://org.servicoturismo/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ExibirReservas" type="tns:ExibirReservas" />
+  <xs:element name="ExibirReservasResponse" type="tns:ExibirReservasResponse" />
+  <xs:element name="ExibirTodasReservas" type="tns:ExibirTodasReservas" />
+  <xs:element name="ExibirTodasReservasResponse" type="tns:ExibirTodasReservasResponse" />
   <xs:element name="consultarVoos" type="tns:consultarVoos" />
   <xs:element name="consultarVoosResponse" type="tns:consultarVoosResponse" />
   <xs:element name="inserirVoo" type="tns:inserirVoo" />
@@ -20,11 +24,11 @@
   </xs:complexType>
   <xs:complexType name="consultarVoos">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-      <xs:element minOccurs="0" name="arg1" type="xs:string" />
-      <xs:element minOccurs="0" name="arg2" type="xs:string" />
-      <xs:element name="arg3" type="xs:int" />
-      <xs:element name="arg4" type="xs:int" />
+      <xs:element minOccurs="0" name="origem" type="xs:string" />
+      <xs:element minOccurs="0" name="destino" type="xs:string" />
+      <xs:element minOccurs="0" name="data" type="xs:string" />
+      <xs:element name="menores" type="xs:int" />
+      <xs:element name="maiores" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="consultarVoosResponse">
@@ -34,10 +38,10 @@
   </xs:complexType>
   <xs:complexType name="reservarPassagem">
     <xs:sequence>
-      <xs:element name="arg0" type="xs:int" />
-      <xs:element name="arg1" type="xs:int" />
-      <xs:element name="arg2" type="xs:int" />
-      <xs:element name="arg3" type="xs:int" />
+      <xs:element name="idVoo" type="xs:int" />
+      <xs:element name="quantidade" type="xs:int" />
+      <xs:element name="cartao" type="xs:int" />
+      <xs:element name="parcelamento" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="reservarPassagemResponse">
@@ -59,6 +63,24 @@
   <xs:complexType name="listarVoosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExibirReservas">
+    <xs:sequence>
+      <xs:element name="voo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExibirReservasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExibirTodasReservas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ExibirTodasReservasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

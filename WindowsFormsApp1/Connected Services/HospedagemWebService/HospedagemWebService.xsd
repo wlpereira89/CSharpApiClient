@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://org.servicoturismo/" targetNamespace="http://org.servicoturismo/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ErroDiaException" type="tns:ErroDiaException" />
+  <xs:element name="ListarHospedagem" type="tns:ListarHospedagem" />
+  <xs:element name="ListarHospedagemResponse" type="tns:ListarHospedagemResponse" />
+  <xs:element name="consultaPorCidade" type="tns:consultaPorCidade" />
+  <xs:element name="consultaPorCidadeResponse" type="tns:consultaPorCidadeResponse" />
+  <xs:element name="consultaPorNome" type="tns:consultaPorNome" />
+  <xs:element name="consultaPorNomeResponse" type="tns:consultaPorNomeResponse" />
+  <xs:element name="exibirReservasHotel" type="tns:exibirReservasHotel" />
+  <xs:element name="exibirReservasHotelPorDia" type="tns:exibirReservasHotelPorDia" />
+  <xs:element name="exibirReservasHotelPorDiaResponse" type="tns:exibirReservasHotelPorDiaResponse" />
+  <xs:element name="exibirReservasHotelResponse" type="tns:exibirReservasHotelResponse" />
+  <xs:element name="exibirTodasReservas" type="tns:exibirTodasReservas" />
+  <xs:element name="exibirTodasReservasPorDia" type="tns:exibirTodasReservasPorDia" />
+  <xs:element name="exibirTodasReservasPorDiaResponse" type="tns:exibirTodasReservasPorDiaResponse" />
+  <xs:element name="exibirTodasReservasResponse" type="tns:exibirTodasReservasResponse" />
+  <xs:element name="reserva" type="tns:reserva" />
+  <xs:element name="reservaResponse" type="tns:reservaResponse" />
+  <xs:complexType name="exibirTodasReservasPorDia">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="exibirTodasReservasPorDiaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaPorNome">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="dataEntrada" type="xs:string" />
+      <xs:element minOccurs="0" name="dataSaida" type="xs:string" />
+      <xs:element name="pessoas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaPorNomeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaPorCidade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cidade" type="xs:string" />
+      <xs:element minOccurs="0" name="dataEntrada" type="xs:string" />
+      <xs:element minOccurs="0" name="dataSaida" type="xs:string" />
+      <xs:element name="pessoas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaPorCidadeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="exibirReservasHotel">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="exibirReservasHotelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserva">
+    <xs:sequence>
+      <xs:element name="idHotel" type="xs:int" />
+      <xs:element name="pessoas" type="xs:int" />
+      <xs:element minOccurs="0" name="dataEntrada" type="xs:string" />
+      <xs:element minOccurs="0" name="dataSaida" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ErroDiaException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarHospedagem">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarHospedagemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="exibirTodasReservas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="exibirTodasReservasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="exibirReservasHotelPorDia">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="exibirReservasHotelPorDiaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

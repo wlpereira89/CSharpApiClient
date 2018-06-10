@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\HospedagemWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\TurismoWebService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,14 +108,51 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReservaHosp.resx">
+      <DependentUpon>ReservaHosp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReservaVoo.resx">
       <DependentUpon>ReservaVoo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\HospedagemWebService\HospedagemWebService.wsdl" />
+    <None Include="Connected Services\HospedagemWebService\HospedagemWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.exibirReservasHotelPorDiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.exibirTodasReservasPorDiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.ListarHospedagemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.reservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\TurismoWebService\ServicoTurismo1.wsdl" />
     <None Include="Connected Services\TurismoWebService\ServicoTurismo1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.consultarVoosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.ExibirReservasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.ExibirTodasReservasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TurismoWebService\WindowsFormsApp1.TurismoWebService.inserirVooResponse.datasource">
@@ -142,6 +184,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\HospedagemWebService\" />
     <WCFMetadataStorage Include="Connected Services\TurismoWebService\" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +195,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\TurismoWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HospedagemWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HospedagemWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HospedagemWebService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

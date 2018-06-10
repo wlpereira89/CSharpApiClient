@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
     public static class SharedContent
     {
         public static TurismoWebService.VoosWebServiceClient servicoVoos = new TurismoWebService.VoosWebServiceClient();
+        public static HospedagemWebService.HospedagemWebServiceClient servicoHospedagem = new HospedagemWebService.HospedagemWebServiceClient();
         public static List<Voo> ultimaListaVoos;
         public static List<Voo> ultimaListaVoosVolta;
         public static List<Hosp> ultimaListaHosp;

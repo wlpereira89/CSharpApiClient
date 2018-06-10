@@ -50,6 +50,7 @@
             this.Hospedagem.TabIndex = 1;
             this.Hospedagem.Text = "Hospedagem";
             this.Hospedagem.UseVisualStyleBackColor = true;
+            this.Hospedagem.Click += new System.EventHandler(this.Hospedagem_Click);
             // 
             // Entrada
             // 
@@ -61,6 +62,7 @@
             this.Name = "Entrada";
             this.Padding = new System.Windows.Forms.Padding(300);
             this.Text = "Entrada";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Entrada_FormClosed);
             this.ResumeLayout(false);
 
         }

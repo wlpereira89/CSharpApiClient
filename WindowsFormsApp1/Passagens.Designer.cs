@@ -261,6 +261,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Passagens";
             this.Text = "Passagens";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Passagens_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).EndInit();
             this.ResumeLayout(false);

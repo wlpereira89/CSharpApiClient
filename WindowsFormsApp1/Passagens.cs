@@ -71,9 +71,6 @@ namespace WindowsFormsApp1
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
             Close();
-            Entrada _f;
-            _f = new Entrada();
-            _f.Show();
         }
 
         private void BtnListarVoos_Click(object sender, EventArgs e)
@@ -99,6 +96,13 @@ namespace WindowsFormsApp1
                 EditDtVolta.Visible = true;
                 Volta.Visible = true;
             }
+        }
+
+        private void Passagens_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Entrada _f;
+            _f = new Entrada();
+            _f.Show();
         }
     }
 }

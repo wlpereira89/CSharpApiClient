@@ -21,7 +21,19 @@ namespace WindowsFormsApp1
         {
             Passagens _f = new Passagens();
             _f.Show();
-            this.Hide();
+            Hide();
+        }
+
+        private void Hospedagem_Click(object sender, EventArgs e)
+        {
+            Hospedagem _f = new Hospedagem();
+            _f.Show();
+            Hide();
+        }
+
+        private void Entrada_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

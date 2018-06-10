@@ -12,9 +12,46 @@ namespace WindowsFormsApp1
 {
     public partial class Hospedagem : Form
     {
+        List<String> cidades;
+        List<String> hoteis;
         public Hospedagem()
         {
+            cidades = new List<String>();
+            hoteis = new List<String>();
+            String[] Shoteis = SharedContent.servicoHospedagem.ListarHospedagem();
+            foreach (String h in Shoteis)
+            {
+                Boolean flag = false;
+                String[] hp = h.Split('-');
+                foreach (string c in cidades)
+                {
+                    if (c.Equals(hp[2].Trim()))
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag)
+                {
+                    cidades.Add(hp[2].Trim());
+                }
+                flag = false;
+                foreach (string c in hoteis)
+                {
+                    if (c.Equals(hp[1].Trim()))
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag)
+                {
+                    hoteis.Add(hp[1].Trim());
+                }
+            }
+            
             InitializeComponent();
+            EditParametro.DataSource = cidades;
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
@@ -34,11 +71,16 @@ namespace WindowsFormsApp1
             _f.Show();
         }
 
-        private void Hospedagem_FormClosing(object sender, FormClosingEventArgs e)
+        private void SelCdd_CheckedChanged(object sender, EventArgs e)
         {
-            Entrada _f;
-            _f = new Entrada();
-            _f.Show();
+            if (SelCdd.Checked)
+            {
+                EditParametro.DataSource = cidades;
+            }
+            else
+            {
+                EditParametro.DataSource = hoteis;
+            }
         }
     }
 }
