@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
         public static List<Voo> ultimaListaVoosVolta;
         public static List<Hosp> ultimaListaHosp;
         public static Boolean idaVolta = false;
+        public static decimal menores = 0;
+        public static decimal maiores = 0;
         public static List<Voo> GerarListaVoos(string[] voos)
         {
             List<Voo> listaVoos = new List<Voo>();

@@ -40,11 +40,11 @@
             this.SelIdaVolta = new System.Windows.Forms.RadioButton();
             this.SelSoIda = new System.Windows.Forms.RadioButton();
             this.EditDtVolta = new System.Windows.Forms.DateTimePicker();
-            this.EditOrigem = new System.Windows.Forms.TextBox();
-            this.EditDestino = new System.Windows.Forms.TextBox();
             this.BtnConfirma = new System.Windows.Forms.Button();
             this.BtnVoltar = new System.Windows.Forms.Button();
             this.BtnListarVoos = new System.Windows.Forms.Button();
+            this.EditOrigem = new System.Windows.Forms.ComboBox();
+            this.EditDestino = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 45);
+            this.label2.Location = new System.Drawing.Point(184, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
@@ -107,13 +107,20 @@
             // 
             this.EditMaiores.Location = new System.Drawing.Point(81, 128);
             this.EditMaiores.Name = "EditMaiores";
+            this.EditMaiores.ReadOnly = true;
             this.EditMaiores.Size = new System.Drawing.Size(47, 20);
             this.EditMaiores.TabIndex = 6;
+            this.EditMaiores.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // EditMenores
             // 
             this.EditMenores.Location = new System.Drawing.Point(241, 128);
             this.EditMenores.Name = "EditMenores";
+            this.EditMenores.ReadOnly = true;
             this.EditMenores.Size = new System.Drawing.Size(39, 20);
             this.EditMenores.TabIndex = 7;
             // 
@@ -154,20 +161,6 @@
             this.EditDtVolta.Size = new System.Drawing.Size(324, 20);
             this.EditDtVolta.TabIndex = 11;
             // 
-            // EditOrigem
-            // 
-            this.EditOrigem.Location = new System.Drawing.Point(53, 42);
-            this.EditOrigem.Name = "EditOrigem";
-            this.EditOrigem.Size = new System.Drawing.Size(112, 20);
-            this.EditOrigem.TabIndex = 12;
-            // 
-            // EditDestino
-            // 
-            this.EditDestino.Location = new System.Drawing.Point(226, 42);
-            this.EditDestino.Name = "EditDestino";
-            this.EditDestino.Size = new System.Drawing.Size(151, 20);
-            this.EditDestino.TabIndex = 13;
-            // 
             // BtnConfirma
             // 
             this.BtnConfirma.Location = new System.Drawing.Point(53, 154);
@@ -198,16 +191,62 @@
             this.BtnListarVoos.UseVisualStyleBackColor = true;
             this.BtnListarVoos.Click += new System.EventHandler(this.BtnListarVoos_Click);
             // 
+            // EditOrigem
+            // 
+            this.EditOrigem.AutoCompleteCustomSource.AddRange(new string[] {
+            "Curitiba",
+            "Salvador",
+            "Brasilia",
+            "São Paulo",
+            "Rio de Janeiro"});
+            this.EditOrigem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.EditOrigem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.EditOrigem.FormattingEnabled = true;
+            this.EditOrigem.Items.AddRange(new object[] {
+            "Curitiba",
+            "Salvador",
+            "Brasilia",
+            "São Paulo",
+            "Rio de Janeiro"});
+            this.EditOrigem.Location = new System.Drawing.Point(53, 41);
+            this.EditOrigem.Name = "EditOrigem";
+            this.EditOrigem.Size = new System.Drawing.Size(125, 21);
+            this.EditOrigem.TabIndex = 17;
+            this.EditOrigem.Text = "Curitiba";
+            // 
+            // EditDestino
+            // 
+            this.EditDestino.AutoCompleteCustomSource.AddRange(new string[] {
+            "Curitiba",
+            "Salvador",
+            "Brasilia",
+            "São Paulo",
+            "Rio de Janeiro"});
+            this.EditDestino.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.EditDestino.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.EditDestino.FormattingEnabled = true;
+            this.EditDestino.Items.AddRange(new object[] {
+            "Curitiba",
+            "Salvador",
+            "Brasilia",
+            "São Paulo",
+            "Rio de Janeiro"});
+            this.EditDestino.Location = new System.Drawing.Point(233, 41);
+            this.EditDestino.Name = "EditDestino";
+            this.EditDestino.Size = new System.Drawing.Size(144, 21);
+            this.EditDestino.TabIndex = 18;
+            this.EditDestino.Text = "São Paulo";
+            // 
             // Passagens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 194);
+            this.Controls.Add(this.EditDestino);
+            this.Controls.Add(this.EditOrigem);
             this.Controls.Add(this.BtnListarVoos);
             this.Controls.Add(this.BtnVoltar);
             this.Controls.Add(this.BtnConfirma);
-            this.Controls.Add(this.EditDestino);
-            this.Controls.Add(this.EditOrigem);
             this.Controls.Add(this.EditDtVolta);
             this.Controls.Add(this.SelSoIda);
             this.Controls.Add(this.SelIdaVolta);
@@ -243,10 +282,10 @@
         private System.Windows.Forms.RadioButton SelIdaVolta;
         private System.Windows.Forms.RadioButton SelSoIda;
         private System.Windows.Forms.DateTimePicker EditDtVolta;
-        private System.Windows.Forms.TextBox EditOrigem;
-        private System.Windows.Forms.TextBox EditDestino;
         private System.Windows.Forms.Button BtnConfirma;
         private System.Windows.Forms.Button BtnVoltar;
         private System.Windows.Forms.Button BtnListarVoos;
+        private System.Windows.Forms.ComboBox EditOrigem;
+        private System.Windows.Forms.ComboBox EditDestino;
     }
 }

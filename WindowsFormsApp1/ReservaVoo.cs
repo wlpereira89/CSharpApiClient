@@ -16,11 +16,13 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             ListIda.DataSource=SharedContent.ultimaListaVoos;
+            EditMaiores.Value = SharedContent.maiores;
+            EditMenores.Value = SharedContent.menores;
             if (!SharedContent.idaVolta)
             {
                 ListVolta.Visible = false;
                 Volta.Visible = false;
-                ListIda.Height = 316;
+                ListIda.Height = 316;               
             }
             else
             {
@@ -36,7 +38,7 @@ namespace WindowsFormsApp1
             if (SharedContent.idaVolta)
             {
                 Voo itemVolta = (Voo)ListVolta.SelectedItem;
-                if ((SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text))) && (SharedContent.servicoVoos.reservarPassagem(itemVolta.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text))))
+                if ((SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value))) && (SharedContent.servicoVoos.reservarPassagem(itemVolta.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value))))
                 {
                     Close();
                     MessageBox.Show("Reserva realizada com sucesso");
@@ -48,7 +50,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                if (SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text)))
+                if (SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value)))
                 {
                     Close();
                     MessageBox.Show("Reserva realizada com sucesso");
@@ -59,6 +61,11 @@ namespace WindowsFormsApp1
                 }
             }
             
+        }
+
+        private void EditCartao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

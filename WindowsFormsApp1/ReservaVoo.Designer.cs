@@ -37,8 +37,13 @@
             this.Ida = new System.Windows.Forms.Label();
             this.ListVolta = new System.Windows.Forms.ListBox();
             this.Volta = new System.Windows.Forms.Label();
+            this.cartao = new System.Windows.Forms.Label();
+            this.EditCartao = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EditParcelamento = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditParcelamento)).BeginInit();
             this.SuspendLayout();
             // 
             // ListIda
@@ -51,9 +56,9 @@
             // 
             // BtnReservar
             // 
-            this.BtnReservar.Location = new System.Drawing.Point(379, 353);
+            this.BtnReservar.Location = new System.Drawing.Point(379, 356);
             this.BtnReservar.Name = "BtnReservar";
-            this.BtnReservar.Size = new System.Drawing.Size(118, 23);
+            this.BtnReservar.Size = new System.Drawing.Size(118, 46);
             this.BtnReservar.TabIndex = 1;
             this.BtnReservar.Text = "Reservar";
             this.BtnReservar.UseVisualStyleBackColor = true;
@@ -81,13 +86,16 @@
             // 
             this.EditMaiores.Location = new System.Drawing.Point(59, 356);
             this.EditMaiores.Name = "EditMaiores";
+            this.EditMaiores.ReadOnly = true;
             this.EditMaiores.Size = new System.Drawing.Size(120, 20);
             this.EditMaiores.TabIndex = 6;
             // 
             // EditMenores
             // 
+            this.EditMenores.InterceptArrowKeys = false;
             this.EditMenores.Location = new System.Drawing.Point(242, 356);
             this.EditMenores.Name = "EditMenores";
+            this.EditMenores.ReadOnly = true;
             this.EditMenores.Size = new System.Drawing.Size(120, 20);
             this.EditMenores.TabIndex = 7;
             // 
@@ -117,11 +125,63 @@
             this.Volta.TabIndex = 10;
             this.Volta.Text = "Volta";
             // 
+            // cartao
+            // 
+            this.cartao.AutoSize = true;
+            this.cartao.Location = new System.Drawing.Point(12, 385);
+            this.cartao.Name = "cartao";
+            this.cartao.Size = new System.Drawing.Size(38, 13);
+            this.cartao.TabIndex = 11;
+            this.cartao.Text = "Cartão";
+            // 
+            // EditCartao
+            // 
+            this.EditCartao.Location = new System.Drawing.Point(59, 382);
+            this.EditCartao.Name = "EditCartao";
+            this.EditCartao.Size = new System.Drawing.Size(177, 20);
+            this.EditCartao.TabIndex = 12;
+            this.EditCartao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EditCartao_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(239, 389);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Parcelamento";
+            // 
+            // EditParcelamento
+            // 
+            this.EditParcelamento.Location = new System.Drawing.Point(317, 385);
+            this.EditParcelamento.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.EditParcelamento.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.EditParcelamento.Name = "EditParcelamento";
+            this.EditParcelamento.Size = new System.Drawing.Size(45, 20);
+            this.EditParcelamento.TabIndex = 14;
+            this.EditParcelamento.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // ReservaVoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 382);
+            this.ClientSize = new System.Drawing.Size(509, 407);
+            this.Controls.Add(this.EditParcelamento);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.EditCartao);
+            this.Controls.Add(this.cartao);
             this.Controls.Add(this.Volta);
             this.Controls.Add(this.ListVolta);
             this.Controls.Add(this.Ida);
@@ -135,6 +195,7 @@
             this.Text = "ReservaVoo";
             ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditParcelamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +212,9 @@
         private System.Windows.Forms.Label Ida;
         private System.Windows.Forms.ListBox ListVolta;
         private System.Windows.Forms.Label Volta;
+        private System.Windows.Forms.Label cartao;
+        private System.Windows.Forms.TextBox EditCartao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown EditParcelamento;
     }
 }

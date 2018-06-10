@@ -36,6 +36,8 @@
     <xs:sequence>
       <xs:element name="arg0" type="xs:int" />
       <xs:element name="arg1" type="xs:int" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="reservarPassagemResponse">

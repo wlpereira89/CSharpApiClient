@@ -214,12 +214,22 @@ namespace WindowsFormsApp1.TurismoWebService {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int arg1;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg2;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg3;
+        
         public reservarPassagemRequest() {
         }
         
-        public reservarPassagemRequest(int arg0, int arg1) {
+        public reservarPassagemRequest(int arg0, int arg1, int arg2, int arg3) {
             this.arg0 = arg0;
             this.arg1 = arg1;
+            this.arg2 = arg2;
+            this.arg3 = arg3;
         }
     }
     
@@ -368,10 +378,12 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.reservarPassagem(request);
         }
         
-        public bool reservarPassagem(int arg0, int arg1) {
+        public bool reservarPassagem(int arg0, int arg1, int arg2, int arg3) {
             WindowsFormsApp1.TurismoWebService.reservarPassagemRequest inValue = new WindowsFormsApp1.TurismoWebService.reservarPassagemRequest();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
+            inValue.arg2 = arg2;
+            inValue.arg3 = arg3;
             WindowsFormsApp1.TurismoWebService.reservarPassagemResponse retVal = ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).reservarPassagem(inValue);
             return retVal.@return;
         }
@@ -381,10 +393,12 @@ namespace WindowsFormsApp1.TurismoWebService {
             return base.Channel.reservarPassagemAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.reservarPassagemResponse> reservarPassagemAsync(int arg0, int arg1) {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.TurismoWebService.reservarPassagemResponse> reservarPassagemAsync(int arg0, int arg1, int arg2, int arg3) {
             WindowsFormsApp1.TurismoWebService.reservarPassagemRequest inValue = new WindowsFormsApp1.TurismoWebService.reservarPassagemRequest();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
+            inValue.arg2 = arg2;
+            inValue.arg3 = arg3;
             return ((WindowsFormsApp1.TurismoWebService.VoosWebService)(this)).reservarPassagemAsync(inValue);
         }
     }
