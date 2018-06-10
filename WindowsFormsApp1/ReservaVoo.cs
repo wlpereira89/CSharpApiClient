@@ -15,21 +15,50 @@ namespace WindowsFormsApp1
         public ReservaVoo()
         {
             InitializeComponent();
-            ListDados.DataSource=SharedContent.ultimaListaVoos;
+            ListIda.DataSource=SharedContent.ultimaListaVoos;
+            if (!SharedContent.idaVolta)
+            {
+                ListVolta.Visible = false;
+                Volta.Visible = false;
+                ListIda.Height = 316;
+            }
+            else
+            {
+                ListVolta.DataSource = SharedContent.ultimaListaVoosVolta;
+                
+            }
+            
         }
 
         private void BtnReservar_Click(object sender, EventArgs e)
         {
-            Voo item = (Voo) ListDados.SelectedItem;
-            if (SharedContent.servicoVoos.reservarPassagem(item.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text)))
+            Voo itemIda = (Voo) ListIda.SelectedItem;
+            if (SharedContent.idaVolta)
             {
-                Close();
-                MessageBox.Show("Reserva realizado com sucesso");
+                Voo itemVolta = (Voo)ListVolta.SelectedItem;
+                if ((SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text))) && (SharedContent.servicoVoos.reservarPassagem(itemVolta.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text))))
+                {
+                    Close();
+                    MessageBox.Show("Reserva realizada com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Vagas insuficientes");
+                }
             }
             else
             {
-                MessageBox.Show("Vagas insuficientes");
+                if (SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text)))
+                {
+                    Close();
+                    MessageBox.Show("Reserva realizada com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Vagas insuficientes");
+                }
             }
+            
         }
     }
 }

@@ -10,12 +10,14 @@ namespace WindowsFormsApp1
     {
         public static TurismoWebService.VoosWebServiceClient servicoVoos = new TurismoWebService.VoosWebServiceClient();
         public static List<Voo> ultimaListaVoos;
+        public static List<Voo> ultimaListaVoosVolta;
         public static List<Hosp> ultimaListaHosp;
-        public static List<Voo> GerarListaVoos()
+        public static Boolean idaVolta = false;
+        public static List<Voo> GerarListaVoos(string[] voos)
         {
             List<Voo> listaVoos = new List<Voo>();
-            
-            string[] voos = servicoVoos.obterVoos();
+            if (voos == null)
+                return null;
             foreach (string v in voos)
             {
                 string[] dados = v.Split('-');
@@ -26,6 +28,23 @@ namespace WindowsFormsApp1
                 listaVoos.Add(novo);
             }
             ultimaListaVoos = listaVoos;
+            return listaVoos;
+        }
+        public static List<Voo> GerarListaVoosVolta(string[] voos)
+        {
+            List<Voo> listaVoos = new List<Voo>();
+            if (voos == null)
+                return null;
+            foreach (string v in voos)
+            {
+                string[] dados = v.Split('-');
+                string[] dataSp = dados[3].Split('/');
+                DateTime data = new DateTime(Convert.ToInt32(dataSp[2].Trim()), Convert.ToInt32(dataSp[1].Trim()), Convert.ToInt32(dataSp[0].Trim()));
+
+                Voo novo = new Voo(Convert.ToInt32(dados[0].Trim()), dados[1].Trim(), dados[2].Trim(), data, Convert.ToDouble(dados[4].Replace('.', ',').Trim()), Convert.ToInt32(dados[5].Trim()));
+                listaVoos.Add(novo);
+            }
+            ultimaListaVoosVolta = listaVoos;
             return listaVoos;
         }
     }

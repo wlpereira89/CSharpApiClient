@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Volta = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.EditMaiores = new System.Windows.Forms.NumericUpDown();
@@ -76,14 +76,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Ida";
             // 
-            // label4
+            // Volta
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Volta";
+            this.Volta.AutoSize = true;
+            this.Volta.Location = new System.Drawing.Point(7, 106);
+            this.Volta.Name = "Volta";
+            this.Volta.Size = new System.Drawing.Size(31, 13);
+            this.Volta.TabIndex = 3;
+            this.Volta.Text = "Volta";
             // 
             // label5
             // 
@@ -127,6 +127,7 @@
             // SelIdaVolta
             // 
             this.SelIdaVolta.AutoSize = true;
+            this.SelIdaVolta.Checked = true;
             this.SelIdaVolta.Location = new System.Drawing.Point(81, 12);
             this.SelIdaVolta.Name = "SelIdaVolta";
             this.SelIdaVolta.Size = new System.Drawing.Size(76, 17);
@@ -142,9 +143,9 @@
             this.SelSoIda.Name = "SelSoIda";
             this.SelSoIda.Size = new System.Drawing.Size(56, 17);
             this.SelSoIda.TabIndex = 10;
-            this.SelSoIda.TabStop = true;
             this.SelSoIda.Text = "Só Ida";
             this.SelSoIda.UseVisualStyleBackColor = true;
+            this.SelSoIda.CheckedChanged += new System.EventHandler(this.SelSoIda_CheckedChanged);
             // 
             // EditDtVolta
             // 
@@ -215,7 +216,7 @@
             this.Controls.Add(this.EditMaiores);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Volta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -233,7 +234,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Volta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown EditMaiores;
