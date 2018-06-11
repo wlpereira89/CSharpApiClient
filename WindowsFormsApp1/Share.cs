@@ -50,14 +50,51 @@ namespace WindowsFormsApp1
             ultimaListaVoosVolta = listaVoos;
             return listaVoos;
         }
+        public static List<Hosp> GerarListaHoteis(string[] hoteis)
+        {
+            List<Hosp> listaHosp = new List<Hosp>();
+            if (hoteis == null)
+                return null;
+            foreach (string h in hoteis)
+            {
+                string[] dados = h.Split('-');
+
+                Hosp novo = new Hosp(Convert.ToInt32(dados[0]), dados[1], dados[2], Convert.ToDouble(dados[3]));
+                listaHosp.Add(novo);
+            }
+            ultimaListaHosp = listaHosp;
+
+            return listaHosp;
+        }
     }
     
 
     public class Hosp
     {
         private int id;
-        private string local;
-        private string hotel;
+        private String local;
+        private String hotel;
+        private double valor;
+
+        public String Hotel { get => hotel; set => hotel = value; }
+        public String Local { get => local; set => local = value; }
+        public int Id { get => id; set => id = value; }
+        public double Valor { get => valor; set => valor = value; }
+
+        
+
+        public Hosp(int id, String local, String hotel, double valor)
+        {
+            this.Id = id;
+            this.Local = local;
+            this.hotel = hotel;
+            this.Valor = valor;
+        }
+
+        public override string ToString()
+        {
+            return id + " - " + local + " - " + hotel + " - " + valor;
+        }
     }
 
     public class Voo

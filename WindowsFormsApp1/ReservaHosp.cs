@@ -15,6 +15,12 @@ namespace WindowsFormsApp1
         public ReservaHosp()
         {
             InitializeComponent();
+            ListHoteis.DataSource = SharedContent.ultimaListaHosp;
+        }
+
+        private void BtnReservar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

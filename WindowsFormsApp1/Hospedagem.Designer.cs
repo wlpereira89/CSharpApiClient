@@ -50,7 +50,7 @@
             // 
             // BtnVoltar
             // 
-            this.BtnVoltar.Location = new System.Drawing.Point(257, 158);
+            this.BtnVoltar.Location = new System.Drawing.Point(318, 158);
             this.BtnVoltar.Name = "BtnVoltar";
             this.BtnVoltar.Size = new System.Drawing.Size(75, 23);
             this.BtnVoltar.TabIndex = 10;
@@ -91,7 +91,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(73, 116);
+            this.numericUpDown1.Location = new System.Drawing.Point(97, 118);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(47, 20);
             this.numericUpDown1.TabIndex = 7;
@@ -180,12 +180,13 @@
             // 
             // BtnListar
             // 
-            this.BtnListar.Location = new System.Drawing.Point(166, 158);
+            this.BtnListar.Location = new System.Drawing.Point(195, 158);
             this.BtnListar.Name = "BtnListar";
             this.BtnListar.Size = new System.Drawing.Size(75, 23);
             this.BtnListar.TabIndex = 19;
             this.BtnListar.Text = "Listar Hoteis";
             this.BtnListar.UseVisualStyleBackColor = true;
+            this.BtnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // EditParametro
             // 

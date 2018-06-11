@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
             
             InitializeComponent();
             EditParametro.DataSource = cidades;
+            labelParametro.Text = "Cidades";
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
@@ -75,12 +76,22 @@ namespace WindowsFormsApp1
         {
             if (SelCdd.Checked)
             {
+                labelParametro.Text = "Cidades";
                 EditParametro.DataSource = cidades;
             }
             else
             {
+                labelParametro.Text = "Hoteis";
                 EditParametro.DataSource = hoteis;
             }
+        }
+
+        private void BtnListar_Click(object sender, EventArgs e)
+        {
+            SharedContent.GerarListaHoteis(SharedContent.servicoHospedagem.ListarHospedagem());
+            ReservaHosp _f;
+            _f = new ReservaHosp();
+            _f.Show();
         }
     }
 }
