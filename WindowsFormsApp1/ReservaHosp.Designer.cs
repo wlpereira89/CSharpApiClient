@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.ListHoteis = new System.Windows.Forms.ListBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.EditDataSaida = new System.Windows.Forms.DateTimePicker();
+            this.EditDataEntrada = new System.Windows.Forms.DateTimePicker();
+            this.EditMenores = new System.Windows.Forms.NumericUpDown();
+            this.EditMaiores = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,8 +42,8 @@
             this.EditCartao = new System.Windows.Forms.TextBox();
             this.cartao = new System.Windows.Forms.Label();
             this.BtnReservar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditParcelamento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,34 +55,34 @@
             this.ListHoteis.Size = new System.Drawing.Size(442, 225);
             this.ListHoteis.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // EditDataSaida
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(60, 274);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(259, 20);
-            this.dateTimePicker2.TabIndex = 14;
+            this.EditDataSaida.Location = new System.Drawing.Point(60, 274);
+            this.EditDataSaida.Name = "EditDataSaida";
+            this.EditDataSaida.Size = new System.Drawing.Size(259, 20);
+            this.EditDataSaida.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // EditDataEntrada
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(60, 243);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(259, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.EditDataEntrada.Location = new System.Drawing.Point(60, 243);
+            this.EditDataEntrada.Name = "EditDataEntrada";
+            this.EditDataEntrada.Size = new System.Drawing.Size(259, 20);
+            this.EditDataEntrada.TabIndex = 13;
             // 
-            // numericUpDown2
+            // EditMenores
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(407, 274);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown2.TabIndex = 16;
+            this.EditMenores.Location = new System.Drawing.Point(407, 274);
+            this.EditMenores.Name = "EditMenores";
+            this.EditMenores.Size = new System.Drawing.Size(47, 20);
+            this.EditMenores.TabIndex = 16;
             // 
-            // numericUpDown1
+            // EditMaiores
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(407, 243);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown1.TabIndex = 15;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.EditMaiores.Location = new System.Drawing.Point(407, 243);
+            this.EditMaiores.Name = "EditMaiores";
+            this.EditMaiores.Size = new System.Drawing.Size(47, 20);
+            this.EditMaiores.TabIndex = 15;
+            this.EditMaiores.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -191,10 +191,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EditCartao);
             this.Controls.Add(this.cartao);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.EditDataSaida);
+            this.Controls.Add(this.EditDataEntrada);
+            this.Controls.Add(this.EditMenores);
+            this.Controls.Add(this.EditMaiores);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -202,8 +202,8 @@
             this.Controls.Add(this.ListHoteis);
             this.Name = "ReservaHosp";
             this.Text = "ReservaHosp";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditParcelamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,10 +213,10 @@
         #endregion
 
         private System.Windows.Forms.ListBox ListHoteis;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker EditDataSaida;
+        private System.Windows.Forms.DateTimePicker EditDataEntrada;
+        private System.Windows.Forms.NumericUpDown EditMenores;
+        private System.Windows.Forms.NumericUpDown EditMaiores;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

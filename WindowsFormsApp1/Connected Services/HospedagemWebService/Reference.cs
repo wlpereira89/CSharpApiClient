@@ -48,6 +48,33 @@ namespace WindowsFormsApp1.HospedagemWebService {
     public interface HospedagemWebService {
         
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse consultaPorCidade(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse> consultaPorCidadeAsync(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request);
+        
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse exibirReservasHotel(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse> exibirReservasHotelAsync(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request);
+        
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse exibirTodasReservas(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse> exibirTodasReservasAsync(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request);
+        
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelPorDiaRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelPorDiaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -66,33 +93,6 @@ namespace WindowsFormsApp1.HospedagemWebService {
         System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasPorDiaResponse> exibirTodasReservasPorDiaAsync(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasPorDiaRequest request);
         
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorNomeRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorNomeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse consultaPorNome(WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorNomeRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorNomeResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse> consultaPorNomeAsync(WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest request);
-        
-        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse exibirTodasReservas(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse> exibirTodasReservasAsync(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request);
-        
-        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse consultaPorCidade(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse> consultaPorCidadeAsync(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request);
-        
-        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/ListarHospedagemRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/ListarHospedagemResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -100,15 +100,6 @@ namespace WindowsFormsApp1.HospedagemWebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/ListarHospedagemRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/ListarHospedagemResponse")]
         System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.ListarHospedagemResponse> ListarHospedagemAsync(WindowsFormsApp1.HospedagemWebService.ListarHospedagemRequest request);
-        
-        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse exibirReservasHotel(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse> exibirReservasHotelAsync(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request);
         
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/reservaRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/reservaResponse")]
@@ -119,6 +110,130 @@ namespace WindowsFormsApp1.HospedagemWebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/reservaRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/reservaResponse")]
         System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.reservaResponse> reservaAsync(WindowsFormsApp1.HospedagemWebService.reservaRequest request);
+        
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorHotelRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorHotelResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse consultaPorHotel(WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://org.servicoturismo/HospedagemWebService/consultaPorHotelRequest", ReplyAction="http://org.servicoturismo/HospedagemWebService/consultaPorHotelResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse> consultaPorHotelAsync(WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorCidade", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class consultaPorCidadeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cidade;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dataEntrada;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dataSaida;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pessoas;
+        
+        public consultaPorCidadeRequest() {
+        }
+        
+        public consultaPorCidadeRequest(string cidade, string dataEntrada, string dataSaida, int pessoas) {
+            this.cidade = cidade;
+            this.dataEntrada = dataEntrada;
+            this.dataSaida = dataSaida;
+            this.pessoas = pessoas;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorCidadeResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class consultaPorCidadeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public consultaPorCidadeResponse() {
+        }
+        
+        public consultaPorCidadeResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirReservasHotel", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class exibirReservasHotelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public exibirReservasHotelRequest() {
+        }
+        
+        public exibirReservasHotelRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirReservasHotelResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class exibirReservasHotelResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public exibirReservasHotelResponse() {
+        }
+        
+        public exibirReservasHotelResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirTodasReservas", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class exibirTodasReservasRequest {
+        
+        public exibirTodasReservasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirTodasReservasResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class exibirTodasReservasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public exibirTodasReservasResponse() {
+        }
+        
+        public exibirTodasReservasResponse(string[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -188,136 +303,6 @@ namespace WindowsFormsApp1.HospedagemWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorNome", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class consultaPorNomeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nome;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dataEntrada;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dataSaida;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pessoas;
-        
-        public consultaPorNomeRequest() {
-        }
-        
-        public consultaPorNomeRequest(string nome, string dataEntrada, string dataSaida, int pessoas) {
-            this.nome = nome;
-            this.dataEntrada = dataEntrada;
-            this.dataSaida = dataSaida;
-            this.pessoas = pessoas;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorNomeResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class consultaPorNomeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public consultaPorNomeResponse() {
-        }
-        
-        public consultaPorNomeResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirTodasReservas", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class exibirTodasReservasRequest {
-        
-        public exibirTodasReservasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirTodasReservasResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class exibirTodasReservasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public exibirTodasReservasResponse() {
-        }
-        
-        public exibirTodasReservasResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorCidade", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class consultaPorCidadeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cidade;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dataEntrada;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dataSaida;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pessoas;
-        
-        public consultaPorCidadeRequest() {
-        }
-        
-        public consultaPorCidadeRequest(string cidade, string dataEntrada, string dataSaida, int pessoas) {
-            this.cidade = cidade;
-            this.dataEntrada = dataEntrada;
-            this.dataSaida = dataSaida;
-            this.pessoas = pessoas;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorCidadeResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class consultaPorCidadeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public consultaPorCidadeResponse() {
-        }
-        
-        public consultaPorCidadeResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListarHospedagem", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
     public partial class ListarHospedagemRequest {
         
@@ -346,42 +331,6 @@ namespace WindowsFormsApp1.HospedagemWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirReservasHotel", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class exibirReservasHotelRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public exibirReservasHotelRequest() {
-        }
-        
-        public exibirReservasHotelRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="exibirReservasHotelResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
-    public partial class exibirReservasHotelResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public exibirReservasHotelResponse() {
-        }
-        
-        public exibirReservasHotelResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="reserva", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
     public partial class reservaRequest {
         
@@ -401,14 +350,24 @@ namespace WindowsFormsApp1.HospedagemWebService {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string dataSaida;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cartao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int parcelamento;
+        
         public reservaRequest() {
         }
         
-        public reservaRequest(int idHotel, int pessoas, string dataEntrada, string dataSaida) {
+        public reservaRequest(int idHotel, int pessoas, string dataEntrada, string dataSaida, int cartao, int parcelamento) {
             this.idHotel = idHotel;
             this.pessoas = pessoas;
             this.dataEntrada = dataEntrada;
             this.dataSaida = dataSaida;
+            this.cartao = cartao;
+            this.parcelamento = parcelamento;
         }
     }
     
@@ -426,6 +385,57 @@ namespace WindowsFormsApp1.HospedagemWebService {
         }
         
         public reservaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorHotel", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class consultaPorHotelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nome;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dataEntrada;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dataSaida;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pessoas;
+        
+        public consultaPorHotelRequest() {
+        }
+        
+        public consultaPorHotelRequest(string nome, string dataEntrada, string dataSaida, int pessoas) {
+            this.nome = nome;
+            this.dataEntrada = dataEntrada;
+            this.dataSaida = dataSaida;
+            this.pessoas = pessoas;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaPorHotelResponse", WrapperNamespace="http://org.servicoturismo/", IsWrapped=true)]
+    public partial class consultaPorHotelResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://org.servicoturismo/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public consultaPorHotelResponse() {
+        }
+        
+        public consultaPorHotelResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -455,6 +465,79 @@ namespace WindowsFormsApp1.HospedagemWebService {
         
         public HospedagemWebServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorCidade(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request) {
+            return base.Channel.consultaPorCidade(request);
+        }
+        
+        public string[] consultaPorCidade(string cidade, string dataEntrada, string dataSaida, int pessoas) {
+            WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest();
+            inValue.cidade = cidade;
+            inValue.dataEntrada = dataEntrada;
+            inValue.dataSaida = dataSaida;
+            inValue.pessoas = pessoas;
+            WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorCidade(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorCidadeAsync(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request) {
+            return base.Channel.consultaPorCidadeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse> consultaPorCidadeAsync(string cidade, string dataEntrada, string dataSaida, int pessoas) {
+            WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest();
+            inValue.cidade = cidade;
+            inValue.dataEntrada = dataEntrada;
+            inValue.dataSaida = dataSaida;
+            inValue.pessoas = pessoas;
+            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorCidadeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirReservasHotel(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request) {
+            return base.Channel.exibirReservasHotel(request);
+        }
+        
+        public string[] exibirReservasHotel(int id) {
+            WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest();
+            inValue.id = id;
+            WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirReservasHotel(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirReservasHotelAsync(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request) {
+            return base.Channel.exibirReservasHotelAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse> exibirReservasHotelAsync(int id) {
+            WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest();
+            inValue.id = id;
+            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirReservasHotelAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirTodasReservas(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request) {
+            return base.Channel.exibirTodasReservas(request);
+        }
+        
+        public string[] exibirTodasReservas() {
+            WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest();
+            WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirTodasReservas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirTodasReservasAsync(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request) {
+            return base.Channel.exibirTodasReservasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse> exibirTodasReservasAsync() {
+            WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest();
+            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirTodasReservasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -502,85 +585,6 @@ namespace WindowsFormsApp1.HospedagemWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorNome(WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest request) {
-            return base.Channel.consultaPorNome(request);
-        }
-        
-        public string[] consultaPorNome(string nome, string dataEntrada, string dataSaida, int pessoas) {
-            WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest();
-            inValue.nome = nome;
-            inValue.dataEntrada = dataEntrada;
-            inValue.dataSaida = dataSaida;
-            inValue.pessoas = pessoas;
-            WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorNome(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorNomeAsync(WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest request) {
-            return base.Channel.consultaPorNomeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse> consultaPorNomeAsync(string nome, string dataEntrada, string dataSaida, int pessoas) {
-            WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorNomeRequest();
-            inValue.nome = nome;
-            inValue.dataEntrada = dataEntrada;
-            inValue.dataSaida = dataSaida;
-            inValue.pessoas = pessoas;
-            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorNomeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirTodasReservas(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request) {
-            return base.Channel.exibirTodasReservas(request);
-        }
-        
-        public string[] exibirTodasReservas() {
-            WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest();
-            WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirTodasReservas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirTodasReservasAsync(WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest request) {
-            return base.Channel.exibirTodasReservasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirTodasReservasResponse> exibirTodasReservasAsync() {
-            WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirTodasReservasRequest();
-            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirTodasReservasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorCidade(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request) {
-            return base.Channel.consultaPorCidade(request);
-        }
-        
-        public string[] consultaPorCidade(string cidade, string dataEntrada, string dataSaida, int pessoas) {
-            WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest();
-            inValue.cidade = cidade;
-            inValue.dataEntrada = dataEntrada;
-            inValue.dataSaida = dataSaida;
-            inValue.pessoas = pessoas;
-            WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorCidade(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorCidadeAsync(WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest request) {
-            return base.Channel.consultaPorCidadeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse> consultaPorCidadeAsync(string cidade, string dataEntrada, string dataSaida, int pessoas) {
-            WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorCidadeRequest();
-            inValue.cidade = cidade;
-            inValue.dataEntrada = dataEntrada;
-            inValue.dataSaida = dataSaida;
-            inValue.pessoas = pessoas;
-            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorCidadeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WindowsFormsApp1.HospedagemWebService.ListarHospedagemResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.ListarHospedagem(WindowsFormsApp1.HospedagemWebService.ListarHospedagemRequest request) {
             return base.Channel.ListarHospedagem(request);
         }
@@ -602,39 +606,18 @@ namespace WindowsFormsApp1.HospedagemWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirReservasHotel(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request) {
-            return base.Channel.exibirReservasHotel(request);
-        }
-        
-        public string[] exibirReservasHotel(int id) {
-            WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest();
-            inValue.id = id;
-            WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirReservasHotel(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.exibirReservasHotelAsync(WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest request) {
-            return base.Channel.exibirReservasHotelAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.exibirReservasHotelResponse> exibirReservasHotelAsync(int id) {
-            WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest inValue = new WindowsFormsApp1.HospedagemWebService.exibirReservasHotelRequest();
-            inValue.id = id;
-            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).exibirReservasHotelAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WindowsFormsApp1.HospedagemWebService.reservaResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.reserva(WindowsFormsApp1.HospedagemWebService.reservaRequest request) {
             return base.Channel.reserva(request);
         }
         
-        public bool reserva(int idHotel, int pessoas, string dataEntrada, string dataSaida) {
+        public bool reserva(int idHotel, int pessoas, string dataEntrada, string dataSaida, int cartao, int parcelamento) {
             WindowsFormsApp1.HospedagemWebService.reservaRequest inValue = new WindowsFormsApp1.HospedagemWebService.reservaRequest();
             inValue.idHotel = idHotel;
             inValue.pessoas = pessoas;
             inValue.dataEntrada = dataEntrada;
             inValue.dataSaida = dataSaida;
+            inValue.cartao = cartao;
+            inValue.parcelamento = parcelamento;
             WindowsFormsApp1.HospedagemWebService.reservaResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).reserva(inValue);
             return retVal.@return;
         }
@@ -644,13 +627,44 @@ namespace WindowsFormsApp1.HospedagemWebService {
             return base.Channel.reservaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.reservaResponse> reservaAsync(int idHotel, int pessoas, string dataEntrada, string dataSaida) {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.reservaResponse> reservaAsync(int idHotel, int pessoas, string dataEntrada, string dataSaida, int cartao, int parcelamento) {
             WindowsFormsApp1.HospedagemWebService.reservaRequest inValue = new WindowsFormsApp1.HospedagemWebService.reservaRequest();
             inValue.idHotel = idHotel;
             inValue.pessoas = pessoas;
             inValue.dataEntrada = dataEntrada;
             inValue.dataSaida = dataSaida;
+            inValue.cartao = cartao;
+            inValue.parcelamento = parcelamento;
             return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).reservaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorHotel(WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest request) {
+            return base.Channel.consultaPorHotel(request);
+        }
+        
+        public string[] consultaPorHotel(string nome, string dataEntrada, string dataSaida, int pessoas) {
+            WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest();
+            inValue.nome = nome;
+            inValue.dataEntrada = dataEntrada;
+            inValue.dataSaida = dataSaida;
+            inValue.pessoas = pessoas;
+            WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse retVal = ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorHotel(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse> WindowsFormsApp1.HospedagemWebService.HospedagemWebService.consultaPorHotelAsync(WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest request) {
+            return base.Channel.consultaPorHotelAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse> consultaPorHotelAsync(string nome, string dataEntrada, string dataSaida, int pessoas) {
+            WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest inValue = new WindowsFormsApp1.HospedagemWebService.consultaPorHotelRequest();
+            inValue.nome = nome;
+            inValue.dataEntrada = dataEntrada;
+            inValue.dataSaida = dataSaida;
+            inValue.pessoas = pessoas;
+            return ((WindowsFormsApp1.HospedagemWebService.HospedagemWebService)(this)).consultaPorHotelAsync(inValue);
         }
     }
 }

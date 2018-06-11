@@ -62,7 +62,11 @@ namespace WindowsFormsApp1
 
         private void BtnConfirma_Click(object sender, EventArgs e)
         {
-            var servicoVoos = new TurismoWebService.VoosWebServiceClient();
+            if (SelCdd.Checked)
+                SharedContent.GerarListaHoteis(SharedContent.servicoHospedagem.consultaPorCidade(EditParametro.Text.Trim(), EditDataEntrada.Value.ToShortDateString(), EditDataSaida.Value.ToShortDateString(), Convert.ToInt32(EditMaiores.Value+EditMenores.Value)));
+            else
+                SharedContent.GerarListaHoteis(SharedContent.servicoHospedagem.consultaPorHotel(EditParametro.Text.Trim(), EditDataEntrada.Value.ToShortDateString(), EditDataSaida.Value.ToShortDateString(), Convert.ToInt32(EditMaiores.Value + EditMenores.Value)));
+            chamarFormReserva();
         }
 
         private void Hospedagem_FormClosed(object sender, FormClosedEventArgs e)
@@ -89,6 +93,14 @@ namespace WindowsFormsApp1
         private void BtnListar_Click(object sender, EventArgs e)
         {
             SharedContent.GerarListaHoteis(SharedContent.servicoHospedagem.ListarHospedagem());
+            chamarFormReserva();
+        }
+        private void chamarFormReserva()
+        {
+            SharedContent.maiores = EditMaiores.Value;
+            SharedContent.menores = EditMenores.Value;
+            SharedContent.dataEntrada = EditDataEntrada.Value;
+            SharedContent.dataSaida = EditDataSaida.Value;
             ReservaHosp _f;
             _f = new ReservaHosp();
             _f.Show();

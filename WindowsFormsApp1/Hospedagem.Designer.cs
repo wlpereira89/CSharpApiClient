@@ -30,10 +30,10 @@
         {
             this.BtnVoltar = new System.Windows.Forms.Button();
             this.BtnConfirma = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.EditDataSaida = new System.Windows.Forms.DateTimePicker();
+            this.EditDataEntrada = new System.Windows.Forms.DateTimePicker();
+            this.EditMenores = new System.Windows.Forms.NumericUpDown();
+            this.EditMaiores = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.BtnListar = new System.Windows.Forms.Button();
             this.EditParametro = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnVoltar
@@ -68,34 +68,34 @@
             this.BtnConfirma.UseVisualStyleBackColor = true;
             this.BtnConfirma.Click += new System.EventHandler(this.BtnConfirma_Click);
             // 
-            // dateTimePicker2
+            // EditDataSaida
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(69, 90);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(324, 20);
-            this.dateTimePicker2.TabIndex = 6;
+            this.EditDataSaida.Location = new System.Drawing.Point(69, 90);
+            this.EditDataSaida.Name = "EditDataSaida";
+            this.EditDataSaida.Size = new System.Drawing.Size(324, 20);
+            this.EditDataSaida.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // EditDataEntrada
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(69, 58);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.EditDataEntrada.Location = new System.Drawing.Point(69, 58);
+            this.EditDataEntrada.Name = "EditDataEntrada";
+            this.EditDataEntrada.Size = new System.Drawing.Size(324, 20);
+            this.EditDataEntrada.TabIndex = 5;
             // 
-            // numericUpDown2
+            // EditMenores
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(257, 118);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown2.TabIndex = 8;
+            this.EditMenores.Location = new System.Drawing.Point(257, 118);
+            this.EditMenores.Name = "EditMenores";
+            this.EditMenores.Size = new System.Drawing.Size(39, 20);
+            this.EditMenores.TabIndex = 8;
             // 
-            // numericUpDown1
+            // EditMaiores
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(97, 118);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.EditMaiores.Location = new System.Drawing.Point(97, 118);
+            this.EditMaiores.Name = "EditMaiores";
+            this.EditMaiores.Size = new System.Drawing.Size(47, 20);
+            this.EditMaiores.TabIndex = 7;
+            this.EditMaiores.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -206,12 +206,12 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnVoltar);
             this.Controls.Add(this.BtnConfirma);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.EditDataSaida);
             this.Controls.Add(this.SelSoIda);
             this.Controls.Add(this.SelCdd);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.EditDataEntrada);
+            this.Controls.Add(this.EditMenores);
+            this.Controls.Add(this.EditMaiores);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -220,8 +220,8 @@
             this.Name = "Hospedagem";
             this.Text = "Hospedagem";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Hospedagem_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMenores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditMaiores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,10 +231,10 @@
 
         private System.Windows.Forms.Button BtnVoltar;
         private System.Windows.Forms.Button BtnConfirma;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker EditDataSaida;
+        private System.Windows.Forms.DateTimePicker EditDataEntrada;
+        private System.Windows.Forms.NumericUpDown EditMenores;
+        private System.Windows.Forms.NumericUpDown EditMaiores;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

@@ -121,7 +121,7 @@
     <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.consultaPorCidadeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.consultaPorNomeResponse.datasource">
+    <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.consultaPorHotelResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\HospedagemWebService\WindowsFormsApp1.HospedagemWebService.exibirReservasHotelPorDiaResponse.datasource">

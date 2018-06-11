@@ -5,8 +5,8 @@
   <xs:element name="ListarHospedagemResponse" type="tns:ListarHospedagemResponse" />
   <xs:element name="consultaPorCidade" type="tns:consultaPorCidade" />
   <xs:element name="consultaPorCidadeResponse" type="tns:consultaPorCidadeResponse" />
-  <xs:element name="consultaPorNome" type="tns:consultaPorNome" />
-  <xs:element name="consultaPorNomeResponse" type="tns:consultaPorNomeResponse" />
+  <xs:element name="consultaPorHotel" type="tns:consultaPorHotel" />
+  <xs:element name="consultaPorHotelResponse" type="tns:consultaPorHotelResponse" />
   <xs:element name="exibirReservasHotel" type="tns:exibirReservasHotel" />
   <xs:element name="exibirReservasHotelPorDia" type="tns:exibirReservasHotelPorDia" />
   <xs:element name="exibirReservasHotelPorDiaResponse" type="tns:exibirReservasHotelPorDiaResponse" />
@@ -21,19 +21,6 @@
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="exibirTodasReservasPorDiaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="consultaPorNome">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nome" type="xs:string" />
-      <xs:element minOccurs="0" name="dataEntrada" type="xs:string" />
-      <xs:element minOccurs="0" name="dataSaida" type="xs:string" />
-      <xs:element name="pessoas" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="consultaPorNomeResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
@@ -67,6 +54,8 @@
       <xs:element name="pessoas" type="xs:int" />
       <xs:element minOccurs="0" name="dataEntrada" type="xs:string" />
       <xs:element minOccurs="0" name="dataSaida" type="xs:string" />
+      <xs:element name="cartao" type="xs:int" />
+      <xs:element name="parcelamento" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="reservaResponse">
@@ -77,6 +66,19 @@
   <xs:complexType name="ErroDiaException">
     <xs:sequence>
       <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaPorHotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="dataEntrada" type="xs:string" />
+      <xs:element minOccurs="0" name="dataSaida" type="xs:string" />
+      <xs:element name="pessoas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaPorHotelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListarHospedagem">

@@ -5,6 +5,24 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServTurismo/HospedagemWebService?xsd=1" namespace="http://org.servicoturismo/" />
     </xsd:schema>
   </types>
+  <message name="consultaPorCidade">
+    <part name="parameters" element="tns:consultaPorCidade" />
+  </message>
+  <message name="consultaPorCidadeResponse">
+    <part name="parameters" element="tns:consultaPorCidadeResponse" />
+  </message>
+  <message name="exibirReservasHotel">
+    <part name="parameters" element="tns:exibirReservasHotel" />
+  </message>
+  <message name="exibirReservasHotelResponse">
+    <part name="parameters" element="tns:exibirReservasHotelResponse" />
+  </message>
+  <message name="exibirTodasReservas">
+    <part name="parameters" element="tns:exibirTodasReservas" />
+  </message>
+  <message name="exibirTodasReservasResponse">
+    <part name="parameters" element="tns:exibirTodasReservasResponse" />
+  </message>
   <message name="exibirReservasHotelPorDia">
     <part name="parameters" element="tns:exibirReservasHotelPorDia" />
   </message>
@@ -17,35 +35,11 @@
   <message name="exibirTodasReservasPorDiaResponse">
     <part name="parameters" element="tns:exibirTodasReservasPorDiaResponse" />
   </message>
-  <message name="consultaPorNome">
-    <part name="parameters" element="tns:consultaPorNome" />
-  </message>
-  <message name="consultaPorNomeResponse">
-    <part name="parameters" element="tns:consultaPorNomeResponse" />
-  </message>
-  <message name="exibirTodasReservas">
-    <part name="parameters" element="tns:exibirTodasReservas" />
-  </message>
-  <message name="exibirTodasReservasResponse">
-    <part name="parameters" element="tns:exibirTodasReservasResponse" />
-  </message>
-  <message name="consultaPorCidade">
-    <part name="parameters" element="tns:consultaPorCidade" />
-  </message>
-  <message name="consultaPorCidadeResponse">
-    <part name="parameters" element="tns:consultaPorCidadeResponse" />
-  </message>
   <message name="ListarHospedagem">
     <part name="parameters" element="tns:ListarHospedagem" />
   </message>
   <message name="ListarHospedagemResponse">
     <part name="parameters" element="tns:ListarHospedagemResponse" />
-  </message>
-  <message name="exibirReservasHotel">
-    <part name="parameters" element="tns:exibirReservasHotel" />
-  </message>
-  <message name="exibirReservasHotelResponse">
-    <part name="parameters" element="tns:exibirReservasHotelResponse" />
   </message>
   <message name="reserva">
     <part name="parameters" element="tns:reserva" />
@@ -56,7 +50,25 @@
   <message name="ErroDiaException">
     <part name="fault" element="tns:ErroDiaException" />
   </message>
+  <message name="consultaPorHotel">
+    <part name="parameters" element="tns:consultaPorHotel" />
+  </message>
+  <message name="consultaPorHotelResponse">
+    <part name="parameters" element="tns:consultaPorHotelResponse" />
+  </message>
   <portType name="HospedagemWebService">
+    <operation name="consultaPorCidade">
+      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeRequest" message="tns:consultaPorCidade" />
+      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeResponse" message="tns:consultaPorCidadeResponse" />
+    </operation>
+    <operation name="exibirReservasHotel">
+      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelRequest" message="tns:exibirReservasHotel" />
+      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelResponse" message="tns:exibirReservasHotelResponse" />
+    </operation>
+    <operation name="exibirTodasReservas">
+      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasRequest" message="tns:exibirTodasReservas" />
+      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasResponse" message="tns:exibirTodasReservasResponse" />
+    </operation>
     <operation name="exibirReservasHotelPorDia">
       <input wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelPorDiaRequest" message="tns:exibirReservasHotelPorDia" />
       <output wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelPorDiaResponse" message="tns:exibirReservasHotelPorDiaResponse" />
@@ -65,34 +77,49 @@
       <input wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasPorDiaRequest" message="tns:exibirTodasReservasPorDia" />
       <output wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasPorDiaResponse" message="tns:exibirTodasReservasPorDiaResponse" />
     </operation>
-    <operation name="consultaPorNome">
-      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorNomeRequest" message="tns:consultaPorNome" />
-      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorNomeResponse" message="tns:consultaPorNomeResponse" />
-    </operation>
-    <operation name="exibirTodasReservas">
-      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasRequest" message="tns:exibirTodasReservas" />
-      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirTodasReservasResponse" message="tns:exibirTodasReservasResponse" />
-    </operation>
-    <operation name="consultaPorCidade">
-      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeRequest" message="tns:consultaPorCidade" />
-      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorCidadeResponse" message="tns:consultaPorCidadeResponse" />
-    </operation>
     <operation name="ListarHospedagem">
       <input wsam:Action="http://org.servicoturismo/HospedagemWebService/ListarHospedagemRequest" message="tns:ListarHospedagem" />
       <output wsam:Action="http://org.servicoturismo/HospedagemWebService/ListarHospedagemResponse" message="tns:ListarHospedagemResponse" />
-    </operation>
-    <operation name="exibirReservasHotel">
-      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelRequest" message="tns:exibirReservasHotel" />
-      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/exibirReservasHotelResponse" message="tns:exibirReservasHotelResponse" />
     </operation>
     <operation name="reserva">
       <input wsam:Action="http://org.servicoturismo/HospedagemWebService/reservaRequest" message="tns:reserva" />
       <output wsam:Action="http://org.servicoturismo/HospedagemWebService/reservaResponse" message="tns:reservaResponse" />
       <fault wsam:Action="http://org.servicoturismo/HospedagemWebService/reserva/Fault/ErroDiaException" name="ErroDiaException" message="tns:ErroDiaException" />
     </operation>
+    <operation name="consultaPorHotel">
+      <input wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorHotelRequest" message="tns:consultaPorHotel" />
+      <output wsam:Action="http://org.servicoturismo/HospedagemWebService/consultaPorHotelResponse" message="tns:consultaPorHotelResponse" />
+    </operation>
   </portType>
   <binding name="HospedagemWebServicePortBinding" type="tns:HospedagemWebService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="consultaPorCidade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="exibirReservasHotel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="exibirTodasReservas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="exibirReservasHotelPorDia">
       <soap:operation soapAction="" />
       <input>
@@ -111,43 +138,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="consultaPorNome">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="exibirTodasReservas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="consultaPorCidade">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="ListarHospedagem">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="exibirReservasHotel">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -167,6 +158,15 @@
       <fault name="ErroDiaException">
         <soap:fault use="literal" name="ErroDiaException" namespace="" />
       </fault>
+    </operation>
+    <operation name="consultaPorHotel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
     </operation>
   </binding>
   <service name="HospedagemWebService">
