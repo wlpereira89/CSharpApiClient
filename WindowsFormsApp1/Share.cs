@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//arquivo contem classes que são reusadas nos forms para vários fins
 namespace WindowsFormsApp1
 {
+    // classe recebe  todas os metodos e váriaveis que são necessárias serem chamados mais de uma vez de forma estatica no código
     public static class SharedContent
     {
+        //instancias da classe client do servidor
         public static TurismoWebService.VoosWebServiceClient servicoVoos = new TurismoWebService.VoosWebServiceClient();
         public static HospedagemWebService.HospedagemWebServiceClient servicoHospedagem = new HospedagemWebService.HospedagemWebServiceClient();
+        //bloco de váriaveis que serão transitadas pelos forms, para configuração inicial dos mesmos.
         public static List<Voo> ultimaListaVoos;
         public static List<Voo> ultimaListaVoosVolta;
         public static List<Hosp> ultimaListaHosp;
@@ -18,6 +21,7 @@ namespace WindowsFormsApp1
         public static decimal maiores = 0;
         public static DateTime dataEntrada;
         public static DateTime dataSaida;
+        //metodo recebe um lista de strings de voo do servidor, e gera instancias das classes mapeadas no cliente retornando e armazenando na váriaveis ultimaListaVoos a lista de voos gerados, usado para voos de ida ou unicos
         public static List<Voo> GerarListaVoos(string[] voos)
         {
             List<Voo> listaVoos = new List<Voo>();
@@ -35,6 +39,7 @@ namespace WindowsFormsApp1
             ultimaListaVoos = listaVoos;
             return listaVoos;
         }
+        //metodo recebe um lista de strings de voo do servidor, e gera instancias das classes mapeadas no cliente retornando e armazenando na váriaveis ultimaListaVoosVolta a lista de voos gerados, usado para voos de volta.
         public static List<Voo> GerarListaVoosVolta(string[] voos)
         {
             List<Voo> listaVoos = new List<Voo>();
@@ -52,6 +57,7 @@ namespace WindowsFormsApp1
             ultimaListaVoosVolta = listaVoos;
             return listaVoos;
         }
+        //metodo recebe um lista de strings de hoteis do servidor, e gera instancias das classes mapeadas no cliente retornando e armazenando na váriaveis ultimaListaHosp a lista de voos gerados
         public static List<Hosp> GerarListaHoteis(string[] hoteis)
         {
             List<Hosp> listaHosp = new List<Hosp>();
@@ -70,7 +76,7 @@ namespace WindowsFormsApp1
         }
     }
     
-
+    //classe responsavel por guardar informações recebidas e tratadas de hoteis
     public class Hosp
     {
         private int id;
@@ -92,13 +98,14 @@ namespace WindowsFormsApp1
             this.hotel = hotel;
             this.Valor = valor;
         }
-
+        //polimorfismo usado para apresentação visual nos list box
         public override string ToString()
         {
             return id + " - " + local + " - " + hotel + " - " + valor;
         }
     }
 
+    //classe responsavável por receber e armazenar informações sobre voos
     public class Voo
     {
         private int id;
@@ -122,6 +129,7 @@ namespace WindowsFormsApp1
             this.valor = valor;
             this.vagas = vagas;            
         }
+        //metodo recebe um lista de strings de voo do servidor, e gera instancias das classes mapeadas no cliente retornando e armazenando na váriaveis ultimaListaVoos a lista de voos gerados
         public override string ToString()
         {
             return id + " - " + origem + " - " + destino + " - " + data.ToShortDateString() + " - " + valor + " - " + vagas;

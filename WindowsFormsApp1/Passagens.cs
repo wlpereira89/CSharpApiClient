@@ -16,7 +16,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
+        //solicita conforme parametros do form a lista de voos ao servidor, o numero de passageiros deve ser maior que 0.
+        //se for ida e volta chama uma função gera voos para voo ida, outra que gera os de volta e marca o boolean para que o form seguinte seja corretamente configurado
+        //se for só ida apenas chama uma função gera voos para voo ida e desmarca o boolean para que o form seguinte seja corretamente configurado
         private void BtnConfirma_Click(object sender, EventArgs e)
         {
             if (EditMaiores.Value+EditMenores.Value<=0)
@@ -67,12 +69,12 @@ namespace WindowsFormsApp1
             } 
             
         }
-
+        //fecha o formulário, o evento onclose faz a chamada do form princial.
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        //pede a lista de todos os voos disponveis ao servidor, chama o formulário seguinte configurado como voos de ida apenas, para melhor visualização e possibilidade de escolha de trechos multiplos
         private void BtnListarVoos_Click(object sender, EventArgs e)
         {
             SharedContent.GerarListaVoos(SharedContent.servicoVoos.obterVoos());
@@ -83,7 +85,7 @@ namespace WindowsFormsApp1
             _f = new ReservaVoo();
             _f.Show();
         }
-
+        //altera a datasouce da combo box e a label conforme informado pela radio box, ou cidades ou hotéis
         private void SelSoIda_CheckedChanged(object sender, EventArgs e)
         {
             if (SelSoIda.Checked)
@@ -97,7 +99,7 @@ namespace WindowsFormsApp1
                 Volta.Visible = true;
             }
         }
-
+        //chama o form principal em caso de fechamento do form
         private void Passagens_FormClosed(object sender, FormClosedEventArgs e)
         {
             Entrada _f;

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    //criador classe recebe informações passada via classe statica comum do do namespace para inicializar o form conforme contexto.
     public partial class ReservaVoo : Form
     {
         public ReservaVoo()
@@ -31,33 +32,40 @@ namespace WindowsFormsApp1
             }
             
         }
-
+        //evento responsavel pela reserva das passagens no servidor, é chamado o serviço e verificado se o retorno é verdadeiro para confirmar a reserva, se for ida e volta só é validado com as 2 reservas e são feitas.
         private void BtnReservar_Click(object sender, EventArgs e)
         {
-            Voo itemIda = (Voo) ListIda.SelectedItem;
-            if (SharedContent.idaVolta)
+            if (EditCartao.Text.Equals(""))
             {
-                Voo itemVolta = (Voo)ListVolta.SelectedItem;
-                if ((SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value))) && (SharedContent.servicoVoos.reservarPassagem(itemVolta.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value))))
-                {
-                    Close();
-                    MessageBox.Show("Reserva realizada com sucesso");
-                }
-                else
-                {
-                    MessageBox.Show("Vagas insuficientes");
-                }
+                MessageBox.Show("Preencha o numero do cartão");
             }
             else
             {
-                if (SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value)))
+                Voo itemIda = (Voo)ListIda.SelectedItem;
+                if (SharedContent.idaVolta)
                 {
-                    Close();
-                    MessageBox.Show("Reserva realizada com sucesso");
+                    Voo itemVolta = (Voo)ListVolta.SelectedItem;
+                    if ((SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value))) && (SharedContent.servicoVoos.reservarPassagem(itemVolta.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value))))
+                    {
+                        Close();
+                        MessageBox.Show("Reserva realizada com sucesso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vagas insuficientes");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Vagas insuficientes");
+                    //não fecha o formulário para possibilitar reserva de trechos multiplos
+                    if (SharedContent.servicoVoos.reservarPassagem(itemIda.Id, Convert.ToInt32(EditMaiores.Text) + Convert.ToInt32(EditMenores.Text), Convert.ToInt32(EditCartao.Text), Convert.ToInt32(EditParcelamento.Value)))
+                    {
+                        MessageBox.Show("Reserva realizada com sucesso, faça nova reserva ou feche o formulário");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vagas insuficientes");
+                    }
                 }
             }
             
