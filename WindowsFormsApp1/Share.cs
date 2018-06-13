@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/**
+ *
+ * @author Wagner Pereira e Allan Skau
+ */
 //arquivo contem classes que são reusadas nos forms para vários fins
 namespace WindowsFormsApp1
 {

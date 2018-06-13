@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/**
+ *
+ * @author Wagner Pereira e Allan Skau
+ */
 namespace WindowsFormsApp1
 {
     //criador classe recebe informações passada via classe statica comum do do namespace para inicializar o form conforme contexto.
